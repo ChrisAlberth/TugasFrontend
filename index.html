@@ -1,0 +1,1056 @@
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Sen:wght@400;700;800&display=swap" 
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Gratz's Movie List</title>
+</head>
+<body>
+    <div class="navbar">    
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">Gratz</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <a href="index.html" class="menu-list-item">Home</a>
+                    <a href="#popular" class="menu-list-item">Popular</a>
+                    <a href="#goat" class="menu-list-item">G.O.A.T</a>
+                    <a href="#anime" class="menu-list-item">Anime</a>
+                    <a href="#personal" class="menu-list-item">Personal</a>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="Image/profile.jpg" alt="" >
+                <div class="profile-text-container">
+                    <span class="profile-text">Chris Albert</span>
+                    <!-- <a href="https://www.instagram.com/christianalbert_" class="fa-solid fa-caret-down"></a> -->
+                </div>
+                <div class="toogle">
+                    <i class="fa-solid fa-moon toogle-icon"></i>
+                    <i class="fa-solid fa-sun toogle-icon"></i>
+                    <div class="toogle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="Under maintenance">
+            <a class="search-btn" href="#">
+                <i class="left-menu-icon fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+        <i class="left-menu-icon transparent-icon fa-solid fa-house"></i>
+        <a href="index.html" class="left-menu-icon fa-solid fa-house"></a>
+        <i class="left-menu-icon fa-solid fa-user-group"></i>
+        <i class="left-menu-icon fa-solid fa-bookmark"></i>
+        <i class="left-menu-icon fa-solid fa-tv"></i>
+        <a href="https://youtu.be/dQw4w9WgXcQ" class="left-menu-icon fa-solid fa-hourglass"></a>
+        <a href="https://youtu.be/aCgP8BFjrw4" class="left-menu-icon fa-solid fa-cart-shopping"></a>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url(Image/endgame_bg_resize.jpg);">
+                <img src="Image/avg_end_title.png" alt="" class="featured-title">
+                <p class="featured-desc">After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.
+                </p>
+                <button data-modal-target="#modal1" class="featured-button">READ MORE</button>
+                <div class="modal" id="modal1">
+                    <div class="modal-header">
+                        <div class="title">Avengers: Endgame</div>
+                        <button data-close-button class="close-button">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_SX300.jpg" alt="">
+                        <div class="person">
+                        <p class="director">Director : Anthony Russo, Joe Russo</p>
+                        <p class="writer">Writer : Christopher Markus, Stephen McFeely, Stan Lee</p>
+                        <p class="actors"> Actors : Robert Downey Jr., Chris Evans, Mark Ruffalo</p>
+                        </div>
+                        <div class="rating">
+                            <img class="rt-icon" src="Image/rt.png" alt="">
+                            <span class="rt-rating">94%</span>
+                            <img class="imdb-icon" src="Image/imdb.png" alt="">
+                            <span class="imdb-rating">8.4/10</span>
+                        </div>
+                        <div class="plot">
+                        After the devastating events of Avengers: Infinity War (2018), the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face...
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay"></div>
+            </div>
+            <div class="movie-list-container">
+                <h1 id="popular" class="movie-list-title">MOST POPULAR</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/cI1RBfqXbWaITTjcKGYLhd9F083.jpg" alt="" >
+                            <span class="movie-list-item-title">Parasite</span>
+                            <button data-popup-target="#popup11" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/4HWAQu28e2yaWrtupFPGFkdNU7V.jpg" alt="" >
+                             <span class="movie-list-item-title">Knives Out</span>
+                            <button data-popup-target="#popup12" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/hO7KbdvGOtDdeg0W4Y5nKEHeDDh.jpg" alt="" >
+                            <span class="movie-list-item-title">Joker</span>
+                            <button data-popup-target="#popup13" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/7d6EY00g1c39SGZOoCJ5Py9nNth.jpg" alt="" >
+                            <span class="movie-list-item-title">Spider-Man: Into the Spider-Verse
+                            </span>
+<!--                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore in id beatae ipsa dolor aut necessitatibus esse qui iusto quas nesciunt rem, cumque adipisci illum vitae maiores eius aliquam.</p>
+ -->                            <button data-popup-target="#popup14" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/1h1L9WYiFOlCZnMWDlYNi1NGl2x.jpg" alt="" >
+                            <span class="movie-list-item-title">It</span>
+<!--                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore in id beatae ipsa dolor aut necessitatibus esse qui iusto quas nesciunt rem, cumque adipisci illum vitae maiores eius aliquam.</p>
+ -->                            <button data-popup-target="#popup15" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg" alt="" >
+                            <span class="movie-list-item-title">Avengers: Infinity War
+                            </span>
+<!--                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore in id beatae ipsa dolor aut necessitatibus esse qui iusto quas nesciunt rem, cumque adipisci illum vitae maiores eius aliquam.</p>
+ -->                            <button data-popup-target="#popup16" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/askg3SMvhqEl4OL52YuvdtY40Yb.jpg" alt="" >
+                            <span class="movie-list-item-title">Coco</span>
+<!--                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore in id beatae ipsa dolor aut necessitatibus esse qui iusto quas nesciunt rem, cumque adipisci illum vitae maiores eius aliquam.</p>
+ -->                            <button data-popup-target="#popup17" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/c71zkXAykw5uu4cHnUCE6vA3NY0.jpg" alt="" >
+                            <span class="movie-list-item-title">Logan</span>
+<!--                             <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore in id beatae ipsa dolor aut necessitatibus esse qui iusto quas nesciunt rem, cumque adipisci illum vitae maiores eius aliquam.</p>
+ -->                            <button data-popup-target="#popup18" class="movie-list-item-button">Read more</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 id="goat" class="movie-list-title">GREATEST OF ALL TIME</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg" alt="" >
+                            <span class="movie-list-item-title">Interstellar
+                            </span>
+                            <button data-popup-target="#popup21" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/xKb6mtdfI5Qsggc44Hr9CCUDvaj.jpg" alt="" >
+                             <span class="movie-list-item-title">Terminator 2: Judgment Day</span>
+                            <button data-popup-target="#popup22" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/6fA9nie4ROlkyZAUlgKNjGNCbHG.jpg" alt="" >
+                            <span class="movie-list-item-title">The Dark Knight
+                            </span>
+                            <button data-popup-target="#popup23" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/kjC48HRQpojr3FHx5pZF7Ro9xFg.jpg" alt="" >
+                            <span class="movie-list-item-title">Casino Royale</span>
+                            <button data-popup-target="#popup24" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/FzOdq23pNBJBW5zULFzEdjQXZD.jpg" alt="" >
+                            <span class="movie-list-item-title">The Wolf of Wall Street
+                            </span>
+                            <button data-popup-target="#popup25" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/hZkgoQYus5vegHoetLkCJzb17zJ.jpg" alt="" >
+                            <span class="movie-list-item-title">Fight Club
+                            </span>
+                            <button data-popup-target="#popup26" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/ii8QGacT3MXESqBckQlyrATY0lT.jpg" alt="" >
+                            <span class="movie-list-item-title">Inception</span>
+                            <button data-popup-target="#popup27" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/yVPcPk96E6Qffiyez2oJc7OKD2A.jpg" alt="" >
+                            <span class="movie-list-item-title">Inglourious Basterds
+                            </span>
+                            <button data-popup-target="#popup28" class="movie-list-item-button">Read more</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content"
+                style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url(Image/fsn_hf3_bg_resize.jpg);">
+                <img src="Image/fsn_hf3_logotp.png" alt="" class="featured-title">
+                <p class="featured-desc">As Sakura drowns in the murky darkness of the sins she has committed, Shirou's vow to protect her at all costs leads him into a raging battle to put an end to the Holy Grail War. Will Shirou's wish reach Sakura even as he challenges fate itself in a desperate battle against the rising tide?
+                </p>
+                <button data-modal-target="#modal2" class="featured-button">READ MORE</button>
+                <div class="modal" id="modal2">
+                    <div class="modal-header">
+                        <div class="title">Fate/Stay Night: Heaven's Feel - III. Spring Song</div>
+                        <button data-close-button class="close-button">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <img class="poster" src="https://www.themoviedb.org/t/p/original/lI9JWDutOcN7MOfprddggEK5XdN.jpg" alt="">
+                        <div class="person">
+                        <p class="director">Director : Tomonori Sudô</p>
+                        <p class="writer">Writer : Akira Hiyama, Kinoko Nasu</p>
+                        <p class="actors"> Actors : Yu Asakawa, Michael Donovan, Melissa Fahn</p>
+                        </div>
+                        <div class="rating">
+                            <img class="rt-icon" src="Image/rt.png" alt="">
+                            <span class="rt-rating">-</span>
+                            <img class="imdb-icon" src="Image/imdb.png" alt="">
+                            <span class="imdb-rating">8.1/10</span>
+                        </div>
+                        <div class="plot">
+                        The final chapter in the Heaven's Feel trilogy. Angra Mainyu has successfully possessed his vessel Sakura Matou. It's up to Rin, Shirou, and Rider to cleanse the grail or it will be the end of the world and magecraft as we all know it.
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay"></div>
+            </div>
+            <div class="movie-list-container">
+                <h1 id="anime" class="movie-list-title">BEST ANIME MOVIES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/5lAMQMWpXMsirvtLLvW7cJgEPkU.jpg" alt="" >
+                            <span class="movie-list-item-title">Koe no katachi</span>
+                            <button data-popup-target="#popup31" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/AhHQFrbtA6AkWjefpIKMOd7Dzpe.jpg" alt="" >
+                             <span class="movie-list-item-title">Suzumiya Haruhi no Shoushitsu</span>
+                            <button data-popup-target="#popup32" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/icsaX6cXPAKmEpwkjEJdKhzDudQ.jpg" alt="" >
+                            <span class="movie-list-item-title">Josee to Tora to Sakana-tachi
+                            </span>
+                            <button data-popup-target="#popup33" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/ize3ZieqSy0TCWljmVoEiy8fSFS.jpg" alt="" >
+                            <span class="movie-list-item-title">Tenki no Ko</span>
+                            <button data-popup-target="#popup34" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/bEhxlTpvSPApn22LDAeYKmjZH7A.jpg" alt="" >
+                            <span class="movie-list-item-title">Hotarubi no Mori e</span>
+                            <button data-popup-target="#popup35" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/BNzgGEl0DQiQTPyPcIfcuner1Q.jpg" alt="" >
+                            <span class="movie-list-item-title">Kimi no Suizou wo Tabetai</span>
+                            <button data-popup-target="#popup36" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/5WzXEPSFYKSyooEzWgFkTshlpi.jpg" alt="" >
+                            <span class="movie-list-item-title">Kimi no Na wa.</span>
+                            <button data-popup-target="#popup37" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/mpNd0rTVrp6vHJ9Je7wSa3zC8JS.jpg" alt="" >
+                            <span class="movie-list-item-title">Mononoke Hime</span>
+                            <button data-popup-target="#popup38" class="movie-list-item-button">Read more</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 id="personal" class="movie-list-title">PERSONAL FAVORITE</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/yQIBS8B9l2qXoPoPtxSXvH7CfoT.jpg" alt="" >
+                            <span class="movie-list-item-title">Hacksaw Ridge</span>
+                            <button data-popup-target="#popup41" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/vGdw4AM3Egv5vCf6MkqInISbpp.jpg" alt="" >
+                             <span class="movie-list-item-title">The Theory of Everything</span>
+                            <button data-popup-target="#popup42" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/dAqK9GL7npQq7G2BkAffoUaMMZI.jpg" alt="" >
+                            <span class="movie-list-item-title">Train to Busan</span>
+                            <button data-popup-target="#popup43" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/xOe8nHr5bpPvq4JbGy4vpttDwg2.jpg" alt="" >
+                            <span class="movie-list-item-title">Captain America: The Winter Soldier</span>
+                            <button data-popup-target="#popup44" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/xoqr4dMbRJnzuhsWDF3XNHQwJ9x.jpg" alt="" >
+                            <span class="movie-list-item-title">Kimetsu no Yaiba Movie: Mugen Ressha-hen</span>
+                            <button data-popup-target="#popup45" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/5MgMCnslrxQfOfaq6T5ndkLlcCk.jpg" alt="" >
+                            <span class="movie-list-item-title">Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai</span>
+                            <button data-popup-target="#popup46" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/9441r6izIG2t46C2W1XoKYVN1o.jpg" alt="" >
+                            <span class="movie-list-item-title">Bohemian Rhapsody</span>
+                            <button data-popup-target="#popup47" class="movie-list-item-button">Read more</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="https://www.themoviedb.org/t/p/original/z3Lu4DwDP6jEgq35WxwyWRcJUwz.jpg" alt="" >
+                            <span class="movie-list-item-title">Whiplash</span>
+                            <button data-popup-target="#popup48" class="movie-list-item-button">Read more</button>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-angle-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-popup">
+                <div class="movie-list-popup1">
+                    <div class="popup" id="popup11">
+                        <div class="popup-header">
+                            <div class="title">Parasite</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Bong Joon Ho</p>
+                            <p class="writer">Writer : Bong Joon Ho, Jin-won Han</p>
+                            <p class="actors"> Actors : Kang-ho Song, Sun-kyun Lee, Yeo-jeong Cho</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">98%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.6/10</span>
+                            </div>
+                            <div class="plot">
+                            All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.                                                                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup12">
+                        <div class="popup-header">
+                            <div class="title">Knives Out</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMGUwZjliMTAtNzAxZi00MWNiLWE2NzgtZGUxMGQxZjhhNDRiXkEyXkFqcGdeQXVyNjU1NzU3MzE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Rian Johnson</p>
+                            <p class="writer">Writer : Rian Johnson</p>
+                            <p class="actors"> Actors : Daniel Craig, Chris Evans, Ana de Armas</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">97%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.9/10</span>
+                            </div>
+                            <div class="plot">
+                            When renowned crime novelist Harlan Thrombey (Christopher Plummer) is found dead at his estate just after his 85th birthday, the inquisitive and debonair Detective Benoit Blanc (Daniel Craig) is mysteriously enlisted to investigate. From Harlan's disfunctional family to his devoted staff, Blanc sifts through a web of red herrings and self-serving lies to uncover the truth behind Harlan's untimely death.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup13">
+                        <div class="popup-header">
+                            <div class="title">Joker</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Todd Phillips</p>
+                            <p class="writer">Writer : Todd Phillips, Scott Silver, Bob Kane</p>
+                            <p class="actors"> Actors : Joaquin Phoenix, Robert De Niro, Zazie Beetz</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">68%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            Arthur Fleck works as a clown and is an aspiring stand-up comic. He has mental health issues, part of which involves uncontrollable laughter. Times are tough and, due to his issues and occupation, Arthur has an even worse time than most. Over time these issues bear down on him, shaping his actions, making him ultimately take on the persona he is more known as...Joker.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup14">
+                        <div class="popup-header">
+                            <div class="title">Spider-Man: Into the Spider-Verse</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Bob Persichetti, Peter Ramsey, Rodney Rothman</p>
+                            <p class="writer">Writer : Phil Lord, Rodney Rothman</p>
+                            <p class="actors"> Actors : Shameik Moore, Jake Johnson, Hailee Steinfeld</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">97%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            Teen Miles Morales becomes the Spider-Man of his universe, and must join with five spider-powered individuals from other dimensions to stop a threat for all realities.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup15">
+                        <div class="popup-header">
+                            <div class="title">It</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BZDVkZmI0YzAtNzdjYi00ZjhhLWE1ODEtMWMzMWMzNDA0NmQ4XkEyXkFqcGdeQXVyNzYzODM3Mzg@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Andy Muschietti</p>
+                            <p class="writer">Writer : Chase Palmer, Cary Joji Fukunaga, Gary Dauberman</p>
+                            <p class="actors"> Actors : Bill Skarsgård, Jaeden Martell, Finn Wolfhard</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">86%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.3/10</span>
+                            </div>
+                            <div class="plot">
+                            In the Town of Derry, the local kids are disappearing one by one. In a place known as 'The Barrens', a group of seven kids are united by their horrifying and strange encounters with an evil clown and their determination to kill It.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup16">
+                        <div class="popup-header">
+                            <div class="title">Avengers: Infinity War</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Anthony Russo, Joe Russo</p>
+                            <p class="writer">Writer : Christopher Markus, Stephen McFeely, Stan Lee</p>
+                            <p class="actors"> Actors : Robert Downey Jr., Chris Hemsworth, Mark Ruffalo</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">85%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment, the fate of Earth and existence has never been more uncertain.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup17">
+                        <div class="popup-header">
+                            <div class="title">Coco</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BYjQ5NjM0Y2YtNjZkNC00ZDhkLWJjMWItN2QyNzFkMDE3ZjAxXkEyXkFqcGdeQXVyODIxMzk5NjA@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Lee Unkrich, Adrian Molina</p>
+                            <p class="writer">Writer : Lee Unkrich, Jason Katz, Matthew Aldrich</p>
+                            <p class="actors"> Actors : Anthony Gonzalez, Gael García Bernal, Benjamin Bratt</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">97%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            Despite his family's baffling generations-old ban on music, Miguel dreams of becoming an accomplished musician like his idol, Ernesto de la Cruz. Desperate to prove his talent, Miguel finds himself in the stunning and colorful Land of the Dead following a mysterious chain of events. Along the way, he meets charming trickster Hector, and together, they set off on an extraordinary journey to unlock the real story behind Miguel's family history.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup18">
+                        <div class="popup-header">
+                            <div class="title">Logan</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BYzc5MTU4N2EtYTkyMi00NjdhLTg3NWEtMTY4OTEyMzJhZTAzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : James Mangold</p>
+                            <p class="writer">Writer : James Mangold, Scott Frank, Michael Green</p>
+                            <p class="actors"> Actors : Hugh Jackman, Patrick Stewart, Dafne Keen</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">93%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.1/10</span>
+                            </div>
+                            <div class="plot">
+                            In a future where mutants are nearly extinct, an elderly and weary Logan leads a quiet life. But when Laura, a mutant child pursued by scientists, comes to him for help, he must get her to safety.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-popup2">
+                    <div class="popup" id="popup21">
+                        <div class="popup-header">
+                            <div class="title">Interstellar</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Christopher Nolan</p>
+                            <p class="writer">Writer : Jonathan Nolan, Christopher Nolan</p>
+                            <p class="actors"> Actors : Matthew McConaughey, Anne Hathaway, Jessica Chastain</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">72%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.6/10</span>
+                            </div>
+                            <div class="plot">
+                            Earth's future has been riddled by disasters, famines, and droughts. There is only one way to ensure mankind's survival: Interstellar travel. A newly discovered wormhole in the far reaches of our solar system allows a team of astronauts to go where no man has gone before, a planet that may have the right environment to sustain human life.                                                                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup22">
+                        <div class="popup-header">
+                            <div class="title">Terminator 2: Judgment Day</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMGU2NzRmZjUtOGUxYS00ZjdjLWEwZWItY2NlM2JhNjkxNTFmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : James Cameron</p>
+                            <p class="writer">Writer : James Cameron, William Wisher</p>
+                            <p class="actors"> Actors : Arnold Schwarzenegger, Linda Hamilton, Edward Furlong</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">93%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.5/10</span>
+                            </div>
+                            <div class="plot">
+                            Nearly 10 years have passed since Sarah Connor was targeted for termination by a cyborg from the future. Now her son, John, the future leader of the resistance, is the target for a newer, more deadly terminator. Once again, the resistance has managed to send a protector back to attempt to save John and his mother Sarah.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup23">
+                        <div class="popup-header">
+                            <div class="title">The Dark Knight</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Christopher Nolan</p>
+                            <p class="writer">Writer : Jonathan Nolan, Christopher Nolan, David S. Goyer</p>
+                            <p class="actors"> Actors : Christian Bale, Heath Ledger, Aaron Eckhart</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">94%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">9.0/10</span>
+                            </div>
+                            <div class="plot">
+                            When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup24">
+                        <div class="popup-header">
+                            <div class="title">Casino Royale</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMDI5ZWJhOWItYTlhOC00YWNhLTlkNzctNDU5YTI1M2E1MWZhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Martin Campbell</p>
+                            <p class="writer">Writer : Neal Purvis, Robert Wade, Paul Haggis</p>
+                            <p class="actors"> Actors : Daniel Craig, Eva Green, Judi Dench</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">94%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.0/10</span>
+                            </div>
+                            <div class="plot">
+                            After earning 00 status and a licence to kill, secret agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup25">
+                        <div class="popup-header">
+                            <div class="title">The Wolf of Wall Street</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Martin Scorsese</p>
+                            <p class="writer">Writer : Terence Winter, Jordan Belfort</p>
+                            <p class="actors"> Actors : Leonardo DiCaprio, Jonah Hill, Margot Robbie</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">79%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.2/10</span>
+                            </div>
+                            <div class="plot">
+                            Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup26">
+                        <div class="popup-header">
+                            <div class="title">Fight Club</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : David Fincher</p>
+                            <p class="writer">Writer : Chuck Palahniuk, Jim Uhls</p>
+                            <p class="actors"> Actors : Brad Pitt, Edward Norton, Meat Loaf</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">79%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.8/10</span>
+                            </div>
+                            <div class="plot">
+                            A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground "fight clubs" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup27">
+                        <div class="popup-header">
+                            <div class="title">Inception</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Christopher Nolan</p>
+                            <p class="writer">Writer : Christopher Nolan</p>
+                            <p class="actors"> Actors : Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">87%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.8/10</span>
+                            </div>
+                            <div class="plot">
+                            A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup28">
+                        <div class="popup-header">
+                            <div class="title">Inglourious Basterds</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Quentin Tarantino</p>
+                            <p class="writer">Writer : Quentin Tarantino</p>
+                            <p class="actors"> Actors : Brad Pitt, Diane Kruger, Eli Roth</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">89%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.3/10</span>
+                            </div>
+                            <div class="plot">
+                            In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same.                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-popup3">
+                    <div class="popup" id="popup31">
+                        <div class="popup-header">
+                            <div class="title">Koe no Katachi</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Naoko Yamada</p>
+                            <p class="writer">Writer : Yoshitoki Oima, Reiko Yoshida, Kiyoshi Shigematsu</p>
+                            <p class="actors"> Actors : Miyu Irino, Saori Hayami, Aoi Yûki</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.2/10</span>
+                            </div>
+                            <div class="plot">
+                            The story revolves around Shôko Nishimiya, a grade school student who has impaired hearing. She transfers into a new school, where she is bullied by her classmates, especially Shôya Ishida. It gets to the point where she transfers to another school and as a result, Shôya is ostracized and bullied himself, with no friends to speak to and no plans for the future. Years later, he epicly sets himself on a path to redemption.                                                                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup32">
+                        <div class="popup-header">
+                            <div class="title">Suzumiya Haruhi no Shoushitsu</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BM2IxOGFkYzYtNzE5OS00Zjg3LWE5YmUtMDE5MWMwZWVlNWMxXkEyXkFqcGdeQXVyMjI2MDQxODA@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Tatsuya Ishihara, Yasuhiro Takemoto</p>
+                            <p class="writer">Writer : Nagaru Tanigawa, Fumihiko Shimo</p>
+                            <p class="actors"> Actors : Aya Hirano, Tomokazu Sugita, Minori Chihara</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.1/10</span>
+                            </div>
+                            <div class="plot">
+                            On December 18, Kyon finds that several traces of the SOS Brigade have mysteriously disappeared from his life. Mikuru and Yuki do not seem to recall meeting him, and Haruhi and Itsuki do not attend North High School. In addition, all the former Brigade members have become normal people. Eventually, Kyon receives a message from Yuki's alien counterpart asking him to gather keys for a program that could return him to his own reality. This starts Kyon on a journey that eventually leads him back to the night Haruhi first became interested in meeting aliens, time travelers, and espers.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup33">
+                        <div class="popup-header">
+                            <div class="title">Josee to Tora to Sakana-tachi</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BYjc5YWQwMGUtNDAyOC00NTAxLThmNGItNjdiZWE4ZjBmZGFiXkEyXkFqcGdeQXVyODMyNTM0MjM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Kôtarô Tamura</p>
+                            <p class="writer">Writer : Seiko Tanabe, Sayaka Kuwamura</p>
+                            <p class="actors"> Actors : Kaya Kiyohara, Taishi Nakagawa, Matsutera Chiemi</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.9/10</span>
+                            </div>
+                            <div class="plot">
+                            Tsuneo is a university student studying biology and in love with the ocean, avidly does recreational diving and working in a diving shop to fulfill his dream of diving abroad. One day an unexpected encounter with Josee, a sullen and demanding disabled young woman will take them through a journey that is compassionate, inspirational, loving, and filled with child-like innocence.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup34">
+                        <div class="popup-header">
+                            <div class="title">Tenki no Ko</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNzE4ZDEzOGUtYWFjNC00ODczLTljOGQtZGNjNzhjNjdjNjgzXkEyXkFqcGdeQXVyNzE5ODMwNzI@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Makoto Shinkai</p>
+                            <p class="writer">Writer : Makoto Shinkai</p>
+                            <p class="actors"> Actors : Kotaro Daigo, Nana Mori, Tsubasa Honda</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">92%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.5/10</span>
+                            </div>
+                            <div class="plot">
+                            The summer of his high school freshman year, Hodaka runs away from his remote island home to Tokyo, and quickly finds himself pushed to his financial and personal limits. The weather is unusually gloomy and rainy every day, as if taking its cue from his life. After many days of solitude, he finally finds work as a freelance writer for a mysterious occult magazine. Then, one day, Hodaka meets Hina on a busy street corner. This bright and strong-willed girl possesses a strange and wonderful ability: the power to stop the rain and clear the sky.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup35">
+                        <div class="popup-header">
+                            <div class="title">Hotarubi no Mori e</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BM2FkZjM5ODUtMGM0OC00ZTk2LWFjZDYtNmIzMGRhZWY0MjExXkEyXkFqcGdeQXVyNDgyODgxNjE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Takahiro Ômori</p>
+                            <p class="writer">Writer : Yuki Midorikawa, Takahiro Ômori</p>
+                            <p class="actors"> Actors : Koki Uchiyama, Ayane Sakura, Shinpachi Tsuji</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.9/10</span>
+                            </div>
+                            <div class="plot">
+                            Hotaru is rescued by a spirit when she gets lost in a forest as a child. The two become friends, despite the spirit revealing that he will disappear if he is ever touched by a human.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup36">
+                        <div class="popup-header">
+                            <div class="title">Kimi no Suizou wo Tabetai</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNDM4MWE3NGQtODlkYS00NWU5LTg3ZjMtMTEyNjljOWI4NWIxXkEyXkFqcGdeQXVyNzkzODk2Mzc@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Shin'ichirô Ushijima</p>
+                            <p class="writer">Writer : Yoru Sumino, Shin'ichirô Ushijima, Erica Mendez</p>
+                            <p class="actors"> Actors : Mahiro Takasugi, Lynn, Yukiyo Fujii</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.0/10</span>
+                            </div>
+                            <div class="plot">
+                            A high school student discovers one of his classmates, Sakura Yamauchi, is suffering from a terminal illness. This secret brings the two together, as she lives out her final moments.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup37">
+                        <div class="popup-header">
+                            <div class="title">Kimi no Na wa.</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BODRmZDVmNzUtZDA4ZC00NjhkLWI2M2UtN2M0ZDIzNDcxYThjL2ltYWdlXkEyXkFqcGdeQXVyNTk0MzMzODA@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Makoto Shinkai</p>
+                            <p class="writer">Writer : Makoto Shinkai, Clark Cheng</p>
+                            <p class="actors"> Actors : Ryûnosuke Kamiki, Mone Kamishiraishi, Ryô Narita</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">98%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            Mitsuha is the daughter of the mayor of a small mountain town. She's a straightforward high school girl who lives with her sister and her grandmother and has no qualms about letting it be known that she's uninterested in Shinto rituals or helping her father's electoral campaign. Instead she dreams of leaving the boring town and trying her luck in Tokyo. Taki is a high school boy in Tokyo who works part-time in an Italian restaurant and aspires to become an architect or an artist. Every night he has a strange dream where he becomes...a high school girl in a small mountain town.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup38">
+                        <div class="popup-header">
+                            <div class="title">Mononoke Hime</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BNGIzY2IzODQtNThmMi00ZDE4LWI5YzAtNzNlZTM1ZjYyYjUyXkEyXkFqcGdeQXVyODEzNjM5OTQ@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Hayao Miyazaki</p>
+                            <p class="writer">Writer : Hayao Miyazaki, Neil Gaiman</p>
+                            <p class="actors"> Actors : Yôji Matsuda, Yuriko Ishida, Yûko Tanaka</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">93%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.4/10</span>
+                            </div>
+                            <div class="plot">
+                            While protecting his village from rampaging boar-god/demon, a confident young warrior, Ashitaka, is stricken by a deadly curse. To save his life, he must journey to the forests of the west. Once there, he's embroiled in a fierce campaign that humans were waging on the forest. The ambitious Lady Eboshi and her loyal clan use their guns against the gods of the forest and a brave young woman, Princess Mononoke, who was raised by a wolf-god. Ashitaka sees the good in both sides and tries to stem the flood of blood. This is met by animosity by both sides as they each see him as supporting the enemy.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="movie-list-popup4">
+                    <div class="popup" id="popup41">
+                        <div class="popup-header">
+                            <div class="title">Hacksaw Ridge</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMjQ1NjM3MTUxNV5BMl5BanBnXkFtZTgwMDc5MTY5OTE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Mel Gibson</p>
+                            <p class="writer">Writer : Robert Schenkkan, Andrew Knight</p>
+                            <p class="actors"> Actors : Andrew Garfield, Sam Worthington, Luke Bracey</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">84%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.1/10</span>
+                            </div>
+                            <div class="plot">
+                            The true story of Desmond T. Doss, the conscientious objector who, at the Battle of Okinawa, was awarded the Medal of Honor for his incredible bravery and regard for his fellow soldiers. We see his upbringing and how this shaped his views, especially his religious view and anti-killing stance. We see Doss's trials and tribulations after enlisting in the US Army and trying to become a medic. Finally, we see the hell on Earth that was Hacksaw Ridge.                                                                      
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup" id="popup42">
+                        <div class="popup-header">
+                            <div class="title">The Theory of Everything</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : James Marsh</p>
+                            <p class="writer">Writer : Anthony McCarten, Jane Hawking</p>
+                            <p class="actors"> Actors : Eddie Redmayne, Felicity Jones, Tom Prior</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">80%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.7/10</span>
+                            </div>
+                            <div class="plot">
+                            The Theory of Everything is the extraordinary story of one of the world’s greatest living minds, the renowned astrophysicist Stephen Hawking, who falls deeply in love with fellow Cambridge student Jane Wilde.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup43">
+                        <div class="popup-header">
+                            <div class="title">Train to Busan</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMTkwOTQ4OTg0OV5BMl5BanBnXkFtZTgwMzQyOTM0OTE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Sang-ho Yeon </p>
+                            <p class="writer">Writer : Joo-Suk Park, Sang-ho Yeon</p>
+                            <p class="actors"> Actors : Gong Yoo, Yu-mi Jung, Ma Dong-seok</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">94%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.6/10</span>
+                            </div>
+                            <div class="plot">
+                            Sok-woo, a father with not much time for his daughter, Soo-ahn, are boarding the KTX, a fast train that shall bring them from Seoul to Busan. But during their journey, the apocalypse begins, and most of the earth's population become flesh craving zombies. While the KTX is shooting towards Busan, the passenger's fight for their families and lives against the zombies - and each other.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup44">
+                        <div class="popup-header">
+                            <div class="title">Captain America: The Winter Soldier</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMzA2NDkwODAwM15BMl5BanBnXkFtZTgwODk5MTgzMTE@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Anthony Russo, Joe Russo</p>
+                            <p class="writer">Writer : Christopher Markus, Stephen McFeely, Joe Simon</p>
+                            <p class="actors"> Actors : Chris Evans, Samuel L. Jackson, Scarlett Johansson</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">90%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.7/10</span>
+                            </div>
+                            <div class="plot">
+                            As Steve Rogers struggles to embrace his role in the modern world, he teams up with a fellow Avenger and S.H.I.E.L.D agent, Black Widow, to battle a new threat from history: an assassin known as the Winter Soldier.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup45">
+                        <div class="popup-header">
+                            <div class="title">Kimetsu no Yaiba Movie: Mugen Ressha-hen</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BODI2NjdlYWItMTE1ZC00YzI2LTlhZGQtNzE3NzA4MWM0ODYzXkEyXkFqcGdeQXVyNjU1OTg4OTM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Haruo Sotozaki</p>
+                            <p class="writer">Writer : Koyoharu Gotouge</p>
+                            <p class="actors"> Actors : Natsuki Hanae, Akari Kitô, Yoshitsugu Matsuoka</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.3/10</span>
+                            </div>
+                            <div class="plot">
+                            Tanjiro Kamado, joined with Inosuke Hashibira, a boy raised by boars who wears a boar's head, and Zenitsu Agatsuma, a scared boy who reveals his true power when he sleeps, board the Infinity Train on a new mission with the Flame Pillar, Kyojuro Rengoku, to defeat a demon who has been tormenting the people and killing the demon slayers who oppose it!
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup46">
+                        <div class="popup-header">
+                            <div class="title">Seishun Buta Yarou wa Yumemiru Shoujo no Yume wo Minai</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BYjJmZGUyYmItNzBmNi00MTc0LTljNmUtNWU0NGYxZjVmYTUxXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Sôichi Masui</p>
+                            <p class="writer">Writer : Kamoshida Hajime, Masahiro Yokotani</p>
+                            <p class="actors"> Actors : Kaito Ishikawa, Asami Seto, Inori Minase</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">-</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.3/10</span>
+                            </div>
+                            <div class="plot">
+                            In Fujisawa, where the skies are bright and the seas glisten, Sakuta Azusagawa is in his second year of high school. His blissful days with his girlfriend and upperclassman, Mai Sakurajima, are interrupted with the appearance of his first crush, Shoko Makinohara. For reasons unknown, he encounters two Shoko's: one in middle school and another who has become an adult. As Sakuta finds himself helplessly living with the Shoko's, the adult Shoko leads him around by the nose, causing a huge rift in his relationship with Mai. In the midst of all of this, he discovers that the middle school Shoko is suffering from a grave illness and his scar begins to throb.
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup47">
+                        <div class="popup-header">
+                            <div class="title">Bohemian Rhapsody</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Bryan Singer</p>
+                            <p class="writer">Writer : Anthony McCarten, Peter Morgan</p>
+                            <p class="actors"> Actors : Rami Malek, Lucy Boynton, Gwilym Lee</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">60%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">7.9/10</span>
+                            </div>
+                            <div class="plot">
+                            The story of the legendary British rock band Queen and lead singer Freddie Mercury, leading up to their famous performance at Live Aid (1985).
+                            </div>
+                        </div>
+                    </div><div class="popup" id="popup48">
+                        <div class="popup-header">
+                            <div class="title">Whiplash</div>
+                            <button data-close-popup class="close-popup">&times;</button>
+                        </div>
+                        <div class="popup-body">
+                            <img class="poster" src="https://m.media-amazon.com/images/M/MV5BOTA5NDZlZGUtMjAxOS00YTRkLTkwYmMtYWQ0NWEwZDZiNjEzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg" alt="">
+                            <div class="person">
+                            <p class="director">Director : Damien Chazelle</p>
+                            <p class="writer">Writer : Damien Chazelle</p>
+                            <p class="actors"> Actors : Miles Teller, J.K. Simmons, Melissa Benoist</p>
+                            </div>
+                            <div class="rating">
+                                <img class="rt-icon" src="Image/rt.png" alt="">
+                                <span class="rt-rating">94%</span>
+                                <img class="imdb-icon" src="Image/imdb.png" alt="">
+                                <span class="imdb-rating">8.5/10</span>
+                            </div>
+                            <div class="plot">
+                            A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student's potential.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay"></div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="app.js"></script>
+
+</body>
+</html>
