@@ -18,5 +18,6 @@ Popup movie detail from "Read More" button
 Navigation bar, can direct user to movie list and switch theme to dark or light
 ![nav_bar](https://user-images.githubusercontent.com/89059971/139470893-60937882-4821-4a0e-88db-e829c95c82b4.jpg)
 
-Side bar, search button/bar still under maintenance and only some buttons can work properly 
+Side bar, search button/bar still under maintenance and only some buttons can work properly
+
 ![side_bar](https://user-images.githubusercontent.com/89059971/139471022-8c63eab7-5936-4861-a940-a194a4f94210.jpg)
